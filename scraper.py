@@ -57,7 +57,7 @@ class TribeQuestSpider(CrawlSpider):
                     incorrectCount += r.text.lower().count("The College of William and Mary".lower())
 
                 if link.url not in incorrectLinks:
-                    incorrectLinks.append(link.url)
+                    incorrectLinks.add(link.url)
                     #Write line to output file with link, incorrect usage(s), and the count of the incorrect usage(s)
                     line = []
                     line.append(link.url)
